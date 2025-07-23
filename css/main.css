@@ -244,7 +244,7 @@ body {
 }
 
 .menu_item {
-  width: 49%;
+  width: 45%;
   display: flex;
   flex-direction: row-reverse;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
@@ -269,11 +269,37 @@ body {
   text-align: right;
 }
 
-.menu_item_title {
+.menu_item_title 
   font-size: 18px;
   font-family: 'Noto Serif JP', serif;
-}
 
+/*pancake menu overrides*/
+.pancake_menu .menu_list {
+display: flex;
+flex-direction: column; /*stacks items vertically*/
+gap: 20px;
+align-items: center;/*centers horizontally*/
+}
+.pancake_menu .menu_item{
+width: 100%;/*makes items take full width within its column*/
+max-width: 600px;/*sets max width for readability*/
+flex-direction:row-reverse;/*puts content and image side by side */
+margin-bottom: 0; /*consistent spacing using gaps */
+justify-content: space-between;
+align-items: center;
+}
+.pancake_menu .menu_item_image{
+width:55%;
+height: 300px;
+object-fit: cover;
+}
+.pancake_menu .menu .menu_item_content{
+  width: 55%;
+  text-align: left;
+}
+.pancake_menu .menu_item_content.btn{
+  align-self: flex-start;
+}
 /* ボタンコンポーネント */
 .btn {
   padding: 10px 20px;
